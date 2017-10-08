@@ -166,7 +166,11 @@ In [4]: print( MC.cat_list )
 In [5]: data = MC.catalogs["GALEX_FUV"]
 
 In [7]: print( data.dtype )
-[('id', '<i8'), ('alpha', '<f8'), ('delta', '<f8'), ('x', '<f8'), ('y', '<f8'), ('flux', '<f8'), ('dflux', '<f8'), ('mag', '<f8'), ('dmag', '<f8'), ('a', '<f8'), ('b', '<f8'), ('theta', '<f8'), ('ellpiticity', '<f8'), ('fwhm', '<f8'), ('radius_f', '<f8'), ('radius_k', '<f8'), ('background', '<f8'), ('threshold', '<f8'), ('flags', '<i4'), ('class', '<f8')]
+[('id', '<i8'), ('alpha', '<f8'), ('delta', '<f8'), ('x', '<f8'), ('y', '<f8'),
+ ('flux', '<f8'), ('dflux', '<f8'), ('mag', '<f8'), ('dmag', '<f8'),
+ ('a', '<f8'), ('b', '<f8'), ('theta', '<f8'), ('ellpiticity', '<f8'), ('fwhm',
+ '<f8'), ('radius_f', '<f8'), ('radius_k', '<f8'), ('background', '<f8'),
+ ('threshold', '<f8'), ('flags', '<i4'), ('class', '<f8')]
 
 In [8]: print( data["alpha"] )
 [ 150.340235  150.464152  150.394956 ...,  -99.        -99.        -99.      ]
@@ -182,5 +186,7 @@ In [10]: MC.write( "GALEX_FUV", "Test.cat" )
 ##  because FITS files are annoying, it will have trouble with the header
 
 In [11]: MC.write_fits( "Test.fits", clobber=True )
-WARNING: VerifyWarning: Keyword name 'FILE_NAME' is greater than 8 characters or contains characters not allowed by the FITS standard; a HIERARCH card will be created. [astropy.io.fits.card]
+WARNING: VerifyWarning: Keyword name 'FILE_NAME' is greater than 8 characters or
+contains characters not allowed by the FITS standard; a HIERARCH card will be
+created. [astropy.io.fits.card]
 ```
