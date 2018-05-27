@@ -11,3 +11,4 @@ __version__     = "beta"
 from .Master            import Master
 from .Correlation       import correlate, clean_duplicates, combine
 from .Create            import create
+from .Stamp             import Stamp

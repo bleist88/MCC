@@ -145,7 +145,6 @@ class Master:
             cat_name    - name of the extension to get the data array; if the
                           name 'master' is given, writes the master array.
             file_name   - file path to write to
-
         """
 
         if cat_name.lower() == "master":
